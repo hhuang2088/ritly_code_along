@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   get 'urls/new', to: 'urls#new', as: 'urls_new'
   post '/urls', to: 'urls#create', as: 'urls'
   get '/urls/:id', to: 'urls#show', as: 'url'
+  get '/go/:random_string', to: 'urls#go', as: 'go'
 end
+
+#     root GET  /                   urls#new
+# urls_new GET  /urls/new(.:format) urls#new
+#     urls POST /urls(.:format)     urls#create
+#      url GET  /urls/:id(.:format) urls#show
